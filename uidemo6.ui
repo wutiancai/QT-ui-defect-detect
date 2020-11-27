@@ -143,6 +143,7 @@ border:1px solid #0C87CA;
 /*表格样式*/
 QTableView{
 background:#CFDDEE;
+color: #ABD6FF;
 border:none;
 }
 QWidget QTableView QHeaderView::section{
@@ -156,6 +157,24 @@ border-top-width:0px;
 border-bottom-width:0px;
 background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #52acfa,stop:1 #0C8ED0);
 background:#0ca3f3;
+}
+/*表格item样式*/
+QTableView,QTabWidget::pane{
+border:1px solid #66b4ff;
+selection-background-color:#CADDF3;
+selection-color:#c8cdea;
+/*selected item font color*/
+alternate-background-color:#0CA3F3;/*lightblue*/
+gridline-color:#66b4ff;/*网格线border*/
+}
+QTableView::item:selected{
+color:#7AAFE3;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #133050,stop:1 #133050);
+}
+
+QTableView::item:hover{
+color:#7AAFE3;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #033967,stop:1 #033967);
 }
 /*水平滚动条*/
 
@@ -188,6 +207,43 @@ background:none;
 }
 
 QScrollBar::sub-line:horizontal{
+background:none;
+}
+/*垂直滚动条*/
+QScrollBar:vertical{
+background:#52acfa;
+padding:0px;
+border-radius:6px;
+max-width:12px;
+}
+
+QScrollBar::handle:vertical{
+background:#3db6f5;
+min-height:50px;
+border-radius:6px;
+}
+
+QScrollBar::handle:vertical:hover{
+background:#055fad;
+}
+
+QScrollBar::handle:vertical:pressed{
+background:#055fad;
+}
+
+QScrollBar::add-page:vertical{
+background:none;
+}
+
+QScrollBar::sub-page:vertical{
+background:none;
+}
+
+QScrollBar::add-line:vertical{
+background:none;
+}
+
+QScrollBar::sub-line:vertical{
 background:none;
 }</string>
      </property>
@@ -351,21 +407,6 @@ background:rgb(12,153,219,100)
              <widget class="QTableWidget" name="tableWidget">
               <property name="styleSheet">
                <string notr="true">
-
-QTableView::item:selected{
-color:#7AAFE3;
-background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #133050,stop:1 #133050);
-}
-
-QTableView::item:hover{
-color:#7AAFE3;
-background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #033967,stop:1 #033967);
-}
-
-QTableView::item{
-padding:1px;
-margin:0px;
-}
 QTableView{
 /*background:#329EE7;*/
 }
