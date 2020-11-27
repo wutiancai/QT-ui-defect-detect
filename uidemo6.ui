@@ -125,13 +125,13 @@ border-image: url(:/image/bj.png);
 QWidget QTabWidget QLabel{
 color:#c8cdea
 }
-QWidget QTabWidget QLabel[text=&quot;NG&quot;]{
+QTabWidget QLabel[text=&quot;NG&quot;]{
 color:#cc0000;
 font-size:16px;
 font:italic;
 }
 /*ok/ng样式*/
-QWidget QTabWidget QLabel[text=&quot;OK&quot;]{
+QTabWidget QLabel[buddy=&quot;ok&quot;]{
 color:green;
 font-size:16px;
 font:italic;
@@ -159,12 +159,13 @@ background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #52acfa,stop:1 
 background:#0ca3f3;
 }
 /*表格item样式*/
-QTableView,QTabWidget::pane{
+QTableView{
 border:1px solid #66b4ff;
 selection-background-color:#CADDF3;
 selection-color:#c8cdea;
 /*selected item font color*/
-alternate-background-color:#0CA3F3;/*lightblue*/
+alternate-background-color:#0CA3F3;
+/*lightblue*/
 gridline-color:#66b4ff;/*网格线border*/
 }
 QTableView::item:selected{
@@ -432,7 +433,7 @@ background:none;
               </property>
               <column>
                <property name="text">
-                <string>缺陷1</string>
+                <string>缺陷11</string>
                </property>
               </column>
               <column>
@@ -747,6 +748,11 @@ padding:8px 3px 8px 3px;
                     </item>
                     <item row="1" column="1">
                      <widget class="QLabel" name="label_16">
+                      <property name="styleSheet">
+                       <string notr="true">color:#cc0000;
+font-size:16px;
+font:italic;</string>
+                      </property>
                       <property name="text">
                        <string>NG</string>
                       </property>
@@ -770,6 +776,11 @@ padding:8px 3px 8px 3px;
                     </item>
                     <item row="0" column="1">
                      <widget class="QLabel" name="label_14">
+                      <property name="styleSheet">
+                       <string notr="true">color:green;
+font-size:16px;
+font:italic;</string>
+                      </property>
                       <property name="text">
                        <string>OK</string>
                       </property>
@@ -777,6 +788,11 @@ padding:8px 3px 8px 3px;
                     </item>
                     <item row="2" column="1">
                      <widget class="QLabel" name="label_17">
+                      <property name="styleSheet">
+                       <string notr="true">color:#cc0000;
+font-size:16px;
+font:italic;</string>
+                      </property>
                       <property name="text">
                        <string>NG</string>
                       </property>
@@ -791,6 +807,11 @@ padding:8px 3px 8px 3px;
                     </item>
                     <item row="3" column="1">
                      <widget class="QLabel" name="label_24">
+                      <property name="styleSheet">
+                       <string notr="true">color:#cc0000;
+font-size:16px;
+font:italic;</string>
+                      </property>
                       <property name="text">
                        <string>NG</string>
                       </property>
@@ -920,11 +941,17 @@ padding:8px 3px 8px 3px;
                       <property name="font">
                        <font>
                         <pointsize>-1</pointsize>
+                        <weight>50</weight>
                         <italic>true</italic>
+                        <bold>false</bold>
                        </font>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true"/>
+                       <string notr="true">
+color:#cc0000;
+font-size:16px;
+font:italic;
+</string>
                       </property>
                       <property name="frameShadow">
                        <enum>QFrame::Raised</enum>
@@ -934,6 +961,9 @@ padding:8px 3px 8px 3px;
                       </property>
                       <property name="indent">
                        <number>-1</number>
+                      </property>
+                      <property name="buddy">
+                       <cstring>ok </cstring>
                       </property>
                      </widget>
                     </item>
@@ -948,11 +978,15 @@ padding:8px 3px 8px 3px;
                       <property name="font">
                        <font>
                         <pointsize>-1</pointsize>
+                        <weight>50</weight>
                         <italic>true</italic>
+                        <bold>false</bold>
                        </font>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true"/>
+                       <string notr="true">color:green;
+font-size:16px;
+font:italic;</string>
                       </property>
                       <property name="text">
                        <string>OK</string>
@@ -1016,6 +1050,11 @@ padding:8px 3px 8px 3px;
                       <property name="whatsThis">
                        <string>isOK</string>
                       </property>
+                      <property name="styleSheet">
+                       <string notr="true">color:green;
+font-size:16px;
+font:italic;</string>
+                      </property>
                       <property name="text">
                        <string>OK</string>
                       </property>
@@ -1023,6 +1062,11 @@ padding:8px 3px 8px 3px;
                     </item>
                     <item row="3" column="1">
                      <widget class="QLabel" name="label_15">
+                      <property name="styleSheet">
+                       <string notr="true">color:#cc0000;
+font-size:16px;
+font:italic;</string>
+                      </property>
                       <property name="text">
                        <string>NG</string>
                       </property>
@@ -1325,6 +1369,9 @@ padding:8px 3px 8px 3px;
                           <horstretch>0</horstretch>
                           <verstretch>0</verstretch>
                          </sizepolicy>
+                        </property>
+                        <property name="whatsThis">
+                         <string>11</string>
                         </property>
                         <property name="text">
                          <string>产品名称</string>
